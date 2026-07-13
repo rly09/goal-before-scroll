@@ -1,0 +1,250 @@
+[
+  {
+    "id": "learn_dsa",
+    "name": "Learn DSA",
+    "description": "Master data structures and algorithms.",
+    "whitelist": [
+      "leetcode.com",
+      "geeksforgeeks.org",
+      "codeforces.com",
+      "takeuforward.org",
+      "neetcode.io",
+      "github.com",
+      "stackoverflow.com",
+      "chatgpt.com",
+      "google.com"
+    ],
+    "blacklist": [
+      "instagram.com",
+      "facebook.com",
+      "reddit.com",
+      "twitter.com",
+      "x.com",
+      "hotstar.com",
+      "netflix.com",
+      "primevideo.com",
+      "twitch.tv",
+      "linkedin.com",
+      "pinterest.com",
+      "tumblr.com"
+    ],
+    "youtube_whitelist": [
+      "dsa",
+      "data structure",
+      "algorithm",
+      "dynamic programming",
+      "trees",
+      "graphs",
+      "sorting",
+      "searching",
+      "neetcode",
+      "take u forward",
+      "striver",
+      "babbar",
+      "freecodecamp",
+      "mit opencourseware"
+    ],
+    "youtube_blacklist": [
+      "cricket",
+      "highlight",
+      "movie",
+      "song",
+      "music",
+      "comedy",
+      "meme",
+      "gaming",
+      "gameplay",
+      "trailer",
+      "shorts",
+      "vlog",
+      "dance",
+      "show"
+    ]
+  },
+  {
+    "id": "flutter_dev",
+    "name": "Flutter Development",
+    "description": "Build beautiful mobile and web apps.",
+    "whitelist": [
+      "flutter.dev",
+      "dart.dev",
+      "pub.dev",
+      "github.com",
+      "stackoverflow.com",
+      "chatgpt.com",
+      "google.com",
+      "medium.com"
+    ],
+    "blacklist": [
+      "instagram.com",
+      "facebook.com",
+      "reddit.com",
+      "twitter.com",
+      "x.com",
+      "hotstar.com",
+      "netflix.com",
+      "twitch.tv",
+      "youtube.com/shorts"
+    ],
+    "youtube_whitelist": [
+      "flutter",
+      "dart",
+      "mobile app",
+      "android studio",
+      "xcode",
+      "widget",
+      "state management",
+      "bloc",
+      "provider",
+      "riverpod"
+    ],
+    "youtube_blacklist": [
+      "cricket",
+      "highlight",
+      "movie",
+      "song",
+      "comedy",
+      "meme",
+      "gaming",
+      "shorts",
+      "vlog"
+    ]
+  },
+  {
+    "id": "job_applications",
+    "name": "Job Applications",
+    "description": "Apply for jobs and network.",
+    "whitelist": [
+      "linkedin.com",
+      "indeed.com",
+      "glassdoor.com",
+      "wellfound.com",
+      "remote.co",
+      "resume.io",
+      "github.com",
+      "google.com",
+      "gmail.com",
+      "drive.google.com",
+      "docs.google.com"
+    ],
+    "blacklist": [
+      "instagram.com",
+      "facebook.com",
+      "reddit.com",
+      "twitter.com",
+      "x.com",
+      "hotstar.com",
+      "netflix.com",
+      "twitch.tv",
+      "youtube.com"
+    ],
+    "youtube_whitelist": [],
+    "youtube_blacklist": ["*"]
+  },
+  {
+    "id": "study_os",
+    "name": "Study OS / Core CS",
+    "description": "Learn Operating Systems, Databases, Networks.",
+    "whitelist": [
+      "wikipedia.org",
+      "geeksforgeeks.org",
+      "stackoverflow.com",
+      "github.com",
+      "chatgpt.com",
+      "google.com",
+      "edu"
+    ],
+    "blacklist": [
+      "instagram.com",
+      "facebook.com",
+      "reddit.com",
+      "twitter.com",
+      "x.com",
+      "hotstar.com",
+      "netflix.com",
+      "twitch.tv",
+      "youtube.com/shorts"
+    ],
+    "youtube_whitelist": [
+      "operating system",
+      "process",
+      "thread",
+      "virtual memory",
+      "paging",
+      "deadlock",
+      "database",
+      "sql",
+      "computer network",
+      "tcp/ip",
+      "gate smashing",
+      "neso academy"
+    ],
+    "youtube_blacklist": [
+      "cricket",
+      "movie",
+      "song",
+      "comedy",
+      "meme",
+      "gaming",
+      "shorts"
+    ]
+  },
+  {
+    "id": "build_startup",
+    "name": "Build Startup",
+    "description": "Build, deploy, and launch your product.",
+    "whitelist": [
+      "github.com",
+      "chatgpt.com",
+      "google.com",
+      "stripe.com",
+      "vercel.com",
+      "aws.amazon.com",
+      "firebase.google.com",
+      "supabase.com",
+      "producthunt.com",
+      "news.ycombinator.com",
+      "x.com",
+      "twitter.com"
+    ],
+    "blacklist": [
+      "instagram.com",
+      "facebook.com",
+      "reddit.com",
+      "hotstar.com",
+      "netflix.com",
+      "twitch.tv"
+    ],
+    "youtube_whitelist": [
+      "saas",
+      "startup",
+      "launch",
+      "coding",
+      "indie hacker",
+      "yc",
+      "combinator",
+      "marketing"
+    ],
+    "youtube_blacklist": [
+      "cricket",
+      "highlight",
+      "movie",
+      "song",
+      "comedy",
+      "meme",
+      "gaming",
+      "vlog"
+    ]
+  },
+  {
+    "id": "custom",
+    "name": "Custom Mission",
+    "description": "Configure your own whitelist and blacklist.",
+    "whitelist": [
+      "google.com"
+    ],
+    "blacklist": [],
+    "youtube_whitelist": [],
+    "youtube_blacklist": []
+  }
+]

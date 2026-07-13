@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Goal before Scroll (GBS)</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body class="light-theme">
+  <div id="app">
+
+    <!-- ==========================================
+         ONBOARDING SCREEN
+         ========================================== -->
+    <div id="onboarding-screen" class="screen">
+      <!-- Slide 1: Welcome -->
+      <div class="onboard-slide active" id="slide-1">
+        <div class="onboard-illustration">🌅</div>
+        <h1 class="onboard-title">Goal before Scroll</h1>
+        <p class="onboard-desc">Welcome to a calmer, distraction-free web. GBS replaces stressful blocking screens with offline memes to gently keep you focused.</p>
+        <div class="dots-container">
+          <div class="dot active"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+        </div>
+        <button id="onboard-next-1" class="btn btn-primary">Continue</button>
+      </div>
+
+      <!-- Slide 2: Presets & How It Works -->
+      <div class="onboard-slide" id="slide-2">
+        <div class="onboard-illustration">🎯</div>
+        <h1 class="onboard-title">Custom Focus</h1>
+        <p class="onboard-desc">Just type in what you're working on. We'll block distracting websites using your custom filter lists and keep you on track with memes.</p>
+        <div class="dots-container">
+          <div class="dot"></div>
+          <div class="dot active"></div>
+          <div class="dot"></div>
+        </div>
+        <button id="onboard-next-2" class="btn btn-primary">Sounds Good</button>
+      </div>
+
+      <!-- Slide 3: Let's Go -->
+      <div class="onboard-slide" id="slide-3">
+        <div class="onboard-illustration">☕</div>
+        <h1 class="onboard-title">Ready to Focus?</h1>
+        <p class="onboard-desc">Your settings work completely locally. No internet, no APIs, no tracking. Let's make today productive, one laugh at a time.</p>
+        <div class="dots-container">
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot active"></div>
+        </div>
+        <button id="onboard-finish" class="btn btn-primary">Start Using GBS</button>
+      </div>
+    </div>
+
+    <!-- ==========================================
+         FOCUS TIMER / SESSION SETUP TAB
+         ========================================== -->
+    <div id="focus-screen" class="screen">
+      <!-- Dynamic Content loaded via JS (Setup or Timer Console) -->
+    </div>
+
+    <!-- ==========================================
+         STATISTICS TAB
+         ========================================== -->
+    <div id="stats-screen" class="screen">
+      <!-- Dynamic Content loaded via JS (Stats and Chart) -->
+    </div>
+
+    <!-- ==========================================
+         SETTINGS TAB
+         ========================================== -->
+    <div id="settings-screen" class="screen">
+      <div class="header-area">
+        <div>
+          <div class="brand-subtitle">Goal before Scroll</div>
+          <div class="brand-title">Extension Settings</div>
+        </div>
+      </div>
+
+      <!-- General Settings -->
+      <div class="glass-card">
+        <div class="section-title">General Preferences</div>
+        
+        <div class="settings-option">
+          <div class="option-info">
+            <span class="option-title">Theme</span>
+            <span class="option-desc">Choose your visual aesthetic.</span>
+          </div>
+          <select id="setting-theme" class="setting-select">
+            <option value="system">System</option>
+            <option value="light">Light</option>
+            <option value="dark">Dark</option>
+          </select>
+        </div>
+
+        <div class="settings-option">
+          <div class="option-info">
+            <span class="option-title">Meme Category</span>
+            <span class="option-desc">Filter memes shown during focus.</span>
+          </div>
+          <select id="setting-category" class="setting-select">
+            <option value="Random">Random</option>
+            <option value="Reaction">Reaction</option>
+            <option value="Parents">Parents</option>
+            <option value="Anime">Anime</option>
+            <option value="Sigma">Sigma</option>
+            <option value="Dogs">Dogs</option>
+            <option value="Cats">Cats</option>
+            <option value="Facepalm">Facepalm</option>
+            <option value="Roast">Roast</option>
+          </select>
+        </div>
+
+        <div class="settings-option">
+          <div class="option-info">
+            <span class="option-title">Strict Mode</span>
+            <span class="option-desc">Locks ignore button for 5 seconds.</span>
+          </div>
+          <label class="switch">
+            <input type="checkbox" id="setting-strict">
+            <span class="slider"></span>
+          </label>
+        </div>
+
+        <div class="settings-option">
+          <div class="option-info">
+            <span class="option-title">Sound Alerts</span>
+            <span class="option-desc">Play synthesized alert upon distraction.</span>
+          </div>
+          <label class="switch">
+            <input type="checkbox" id="setting-sound">
+            <span class="slider"></span>
+          </label>
+        </div>
+
+        <div class="settings-option">
+          <div class="option-info">
+            <span class="option-title">Notifications</span>
+            <span class="option-desc">Alert when focus session completes.</span>
+          </div>
+          <label class="switch">
+            <input type="checkbox" id="setting-notif">
+            <span class="slider"></span>
+          </label>
+        </div>
+      </div>
+
+      <!-- Whitelists and Blacklists -->
+      <div class="glass-card">
+        <div class="section-title">Custom Domain Filter</div>
+        
+        <div class="form-group">
+          <label class="form-label" for="setting-whitelist">Custom Whitelist (One per line)</label>
+          <textarea id="setting-whitelist" class="settings-textarea" placeholder="e.g. dev.to&#10;copilot.com"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="setting-blacklist">Custom Blacklist (One per line)</label>
+          <textarea id="setting-blacklist" class="settings-textarea" placeholder="e.g. youtube.com&#10;reddit.com"></textarea>
+        </div>
+
+        <button id="btn-save-lists" class="btn btn-primary" style="height: 38px; font-size: 13px;">
+          Save Custom Filters
+        </button>
+      </div>
+
+      <!-- Backup / Reset Data -->
+      <div class="glass-card">
+        <div class="section-title">Data Administration</div>
+        
+        <div class="settings-row-btns">
+          <button id="btn-export-settings" class="btn btn-secondary" style="height: 38px; font-size: 12px; flex: 1;">
+            📤 Export
+          </button>
+          <button id="btn-import-settings" class="btn btn-secondary" style="height: 38px; font-size: 12px; flex: 1;">
+            📥 Import
+          </button>
+        </div>
+        
+        <button id="btn-reset-data" class="btn btn-danger" style="height: 38px; font-size: 12px; margin-top: 10px; width: 100%;">
+          ⚠️ Reset All Extension Data
+        </button>
+      </div>
+    </div>
+
+    <!-- ==========================================
+         BOTTOM TAB NAVIGATION
+         ========================================== -->
+    <nav class="bottom-nav" id="bottom-nav" style="display: none;">
+      <!-- Focus Tab -->
+      <div class="nav-tab active" data-tab="focus">
+        <svg class="nav-tab-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"></circle>
+          <circle cx="12" cy="12" r="6"></circle>
+          <circle cx="12" cy="12" r="2"></circle>
+        </svg>
+        <span class="nav-tab-lbl">Focus</span>
+      </div>
+      
+      <!-- Stats Tab -->
+      <div class="nav-tab" data-tab="stats">
+        <svg class="nav-tab-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="20" x2="18" y2="10"></line>
+          <line x1="12" y1="20" x2="12" y2="4"></line>
+          <line x1="6" y1="20" x2="6" y2="14"></line>
+        </svg>
+        <span class="nav-tab-lbl">Stats</span>
+      </div>
+
+      <!-- Settings Tab -->
+      <div class="nav-tab" data-tab="settings">
+        <svg class="nav-tab-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="3"></circle>
+          <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+        </svg>
+        <span class="nav-tab-lbl">Settings</span>
+      </div>
+    </nav>
+
+  </div>
+
+  <script type="module" src="popup.js"></script>
+</body>
+</html>

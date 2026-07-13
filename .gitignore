@@ -1,0 +1,3 @@
+# Ignore the memes image folder and labels metadata file
+images/images/
+labels.csv

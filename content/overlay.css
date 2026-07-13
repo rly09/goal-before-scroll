@@ -1,0 +1,280 @@
+/* overlay.css - Scoped styling for the GBS distraction interruption overlay */
+
+:root {
+  --gbs-sage-mist: #9EABA2;
+  --gbs-morning-mint: #BDD1C5;
+  --gbs-butter-cream: #EECC8C;
+  --gbs-peach-glow: #EBB288;
+  --gbs-dusty-rose: #D3A29D;
+  --gbs-terracotta: #A36361;
+
+  --gbs-soft-white: #FAFAF7;
+  --gbs-warm-gray: #ECE8E3;
+  --gbs-light-stone: #D8D8D3;
+  --gbs-text-primary: #4D4D4D;
+  --gbs-text-secondary: #757575;
+  --gbs-border: #E8E4DE;
+
+  --gbs-shadow-soft: 0px 15px 40px rgba(90, 90, 90, 0.10);
+  --gbs-shadow-hover: 0px 20px 50px rgba(90, 90, 90, 0.15);
+  --gbs-shadow-float: 0px 30px 70px rgba(90, 90, 90, 0.18);
+  
+  --gbs-radius-large: 32px;
+  --gbs-radius-medium: 24px;
+  --gbs-radius-button: 20px;
+  --gbs-radius-input: 18px;
+}
+
+/* Base overlay container */
+.gbs-overlay-container {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  z-index: 2147483647 !important; /* Maximum z-index to stay on top */
+  background: rgba(236, 232, 227, 0.6) !important; /* Warm Gray with opacity */
+  backdrop-filter: blur(40px) !important; /* Background Blur */
+  -webkit-backdrop-filter: blur(40px) !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  font-family: 'Inter', 'Manrope', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  color: var(--gbs-text-primary) !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
+  visibility: visible !important;
+  animation: gbs-fade-in 0.4s cubic-bezier(0.215, 0.610, 0.355, 1) forwards !important;
+}
+
+.gbs-overlay-container * {
+  box-sizing: border-box !important;
+}
+
+/* Card */
+.gbs-card {
+  width: 90% !important;
+  max-width: 580px !important;
+  max-height: 90vh !important;
+  overflow-y: auto !important;
+  background: rgba(250, 250, 247, 0.85) !important; /* Soft White Glass */
+  border: 1px solid rgba(232, 228, 222, 0.8) !important;
+  border-radius: var(--gbs-radius-large) !important;
+  padding: 32px !important;
+  box-shadow: var(--gbs-shadow-float) !important;
+  backdrop-filter: blur(20px) !important; /* Glass Blur */
+  -webkit-backdrop-filter: blur(20px) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  text-align: center !important;
+  animation: gbs-scale-up 0.40s cubic-bezier(0.175, 0.885, 0.32, 1.1) forwards !important;
+  position: relative !important;
+}
+
+/* Header */
+.gbs-header {
+  margin-bottom: 24px !important;
+}
+
+.gbs-logo-badge {
+  background: var(--gbs-morning-mint) !important;
+  color: var(--gbs-text-primary) !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  padding: 6px 16px !important;
+  border-radius: 100px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.8px !important;
+  display: inline-block !important;
+  margin-bottom: 12px !important;
+}
+
+.gbs-title {
+  font-size: 26px !important;
+  font-weight: 700 !important;
+  color: var(--gbs-text-primary) !important;
+  margin: 0 0 8px 0 !important;
+  line-height: 1.25 !important;
+}
+
+.gbs-subtitle {
+  font-size: 15px !important;
+  font-weight: 500 !important;
+  color: var(--gbs-text-secondary) !important;
+  margin: 0 !important;
+}
+
+.gbs-mission-highlight {
+  color: var(--gbs-terracotta) !important;
+  font-weight: 700 !important;
+}
+
+/* Meme Container */
+.gbs-meme-frame {
+  width: 100% !important;
+  height: 350px !important;
+  max-height: 45vh !important;
+  border-radius: var(--gbs-radius-medium) !important;
+  overflow: hidden !important;
+  background: var(--gbs-warm-gray) !important;
+  border: 1px solid var(--gbs-border) !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  margin-bottom: 24px !important;
+  box-shadow: var(--gbs-shadow-soft) !important;
+  position: relative !important;
+}
+
+.gbs-meme-img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  transition: transform 0.3s ease !important;
+}
+
+.gbs-meme-frame:hover .gbs-meme-img {
+  transform: scale(1.02) !important;
+}
+
+/* Caption block */
+.gbs-caption-box {
+  background: rgba(235, 178, 136, 0.15) !important; /* Peach Glow Tint */
+  border-left: 4px solid var(--gbs-peach-glow) !important;
+  padding: 12px 18px !important;
+  border-radius: 8px !important;
+  font-style: italic !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  color: var(--gbs-text-primary) !important;
+  margin-bottom: 32px !important;
+  width: 100% !important;
+  text-align: center !important;
+}
+
+/* Buttons Section */
+.gbs-actions {
+  display: flex !important;
+  gap: 16px !important;
+  width: 100% !important;
+  justify-content: center !important;
+}
+
+.gbs-btn {
+  font-family: inherit !important;
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  padding: 14px 28px !important;
+  border-radius: var(--gbs-radius-button) !important;
+  border: none !important;
+  cursor: pointer !important;
+  transition: all 0.25s cubic-bezier(0.215, 0.610, 0.355, 1) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-height: 48px !important;
+  outline: none !important;
+}
+
+/* Back to Mission Button (Primary) */
+.gbs-btn-primary {
+  background: var(--gbs-terracotta) !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 4px 14px rgba(163, 99, 97, 0.25) !important;
+  flex: 1 !important;
+  max-width: 240px !important;
+}
+
+.gbs-btn-primary:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 20px rgba(163, 99, 97, 0.35) !important;
+  background: #b16e6c !important;
+}
+
+.gbs-btn-primary:active {
+  transform: translateY(1px) !important;
+}
+
+/* Ignore Once Button (Secondary) */
+.gbs-btn-secondary {
+  background: var(--gbs-morning-mint) !important;
+  color: var(--gbs-text-primary) !important;
+  box-shadow: 0 4px 14px rgba(189, 209, 197, 0.25) !important;
+  flex: 1 !important;
+  max-width: 240px !important;
+}
+
+.gbs-btn-secondary:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 20px rgba(189, 209, 197, 0.35) !important;
+  background: #acc1b4 !important;
+}
+
+.gbs-btn-secondary:active {
+  transform: translateY(1px) !important;
+}
+
+.gbs-btn-secondary:disabled {
+  opacity: 0.6 !important;
+  cursor: not-allowed !important;
+  transform: none !important;
+  box-shadow: none !important;
+  background: var(--gbs-light-stone) !important;
+  color: var(--gbs-text-secondary) !important;
+}
+
+/* Animations */
+@keyframes gbs-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes gbs-scale-up {
+  from {
+    transform: scale(0.92);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Page Hider when distracted */
+.gbs-body-hidden {
+  visibility: hidden !important;
+  overflow: hidden !important;
+  height: 100vh !important;
+  width: 100vw !important;
+}
+
+/* Dismiss Animation */
+.gbs-overlay-dismiss {
+  animation: gbs-fade-out 0.3s cubic-bezier(0.215, 0.610, 0.355, 1) forwards !important;
+}
+
+.gbs-overlay-dismiss .gbs-card {
+  animation: gbs-scale-down 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards !important;
+}
+
+@keyframes gbs-fade-out {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+@keyframes gbs-scale-down {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(0.92);
+    opacity: 0;
+  }
+}
